@@ -5,6 +5,18 @@ from student import Student
 class TestStudent(unittest.TestCase):
     "TestStudent class"
 
+    @classmethod
+    # use @classmethod and pass (cls) instead of (self)
+    # acts on the class instead of an instance of the class
+    def setUpClass(cls):
+        print("setUpClass")
+
+    @classmethod
+    # use @classmethod and pass (cls) instead of (self)
+    # acts on the class instead of an instance of the class
+    def tearDownClass(cls):
+        print("tearDownClass")
+
     def setUp(self):
         print("setUp")
         self.student = Student("John", "Doe")
