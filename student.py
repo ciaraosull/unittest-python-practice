@@ -1,3 +1,4 @@
+""" Practice student class for running unittest """
 from datetime import date, timedelta
 
 
@@ -19,7 +20,9 @@ class Student:
     @property
     def email(self):
         """ Returns a students email in lowercase as a string """
-        return f"{self._first_name.lower()}.{self._last_name.lower()}@email.com"
+        return (
+            f"{self._first_name.lower()}.{self._last_name.lower()}@email.com"
+        )
 
     def alert_santa(self):
         """ Method that sets naughty list to True"""
