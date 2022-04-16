@@ -1,5 +1,6 @@
 """ practice using different unittest methods"""
 import unittest
+from datetime import timedelta
 from student import Student
 
 
@@ -44,6 +45,14 @@ class TestStudent(unittest.TestCase):
         self.student.alert_santa()
 
         self.assertTrue(self.student.naughty_list)
+
+    def test_apply_extension(self):
+        """ To test a students end date if given an extension"""
+        print("test_apply_extension")
+        old_end_date = self.student.end_date
+        self.student.apply_extension(5)
+        self.assertEqual(
+            self.student.end_date, old_end_date + timedelta(days=5))
 
 
 if __name__ == "__main__":
