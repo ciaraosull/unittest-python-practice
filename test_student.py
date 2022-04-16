@@ -8,14 +8,14 @@ class TestStudent(unittest.TestCase):
     @classmethod
     # use @classmethod and pass (cls) instead of (self)
     # acts on the class instead of an instance of the class
-    def setUpClass(cls):
-        print("setUpClass")
+    def setUpClass(cls): # to use if want to populate test database with data
+        print("setUpClass") # will only run once at start
 
     @classmethod
     # use @classmethod and pass (cls) instead of (self)
     # acts on the class instead of an instance of the class
-    def tearDownClass(cls):
-        print("tearDownClass")
+    def tearDownClass(cls): # to use if want to populate test database with data
+        print("tearDownClass") # will only run once at end
 
     def setUp(self):
         print("setUp")
